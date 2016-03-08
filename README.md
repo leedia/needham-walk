@@ -13,3 +13,11 @@ home
 - mapcode.js
 - sites.html
 - README.md
+
+Fields (for each site):
+Name
+Description
+Coordinates
+Photos (link?)
+Photo Captions
+Group
