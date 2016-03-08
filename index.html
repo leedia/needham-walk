@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Needham History Walk App </title>
+		<meta name = "viewport" content="width=device-width, initial-scale=1"> <!--scale the application in a mobile app according to the device-->
+		<link rel="icon" type="image/png" href="logo.png">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<style type = "text/css">
+			#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+		</style>
+		
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> <!--jquery mobile is a predefined user interface, has the cool headers in default, etc.-->
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+	</head>
+
+	<body>
+
+		<!--HOME PAGE-->
+		<div data-role = "page" id = "index-page">
+			<div data-role="header" data-id="head1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html#index-page" data-ajax="false">Home</a></li>
+						<li><a href="map.html#map-page" data-ajax = "false">Map</a></li>
+						<li><a href="index.html#search-page" data-ajax="false">Search</a></li>
+						<!--<li><a href="d.html">QR</a></li>-->
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /header -->
+
+			<div data-role = "content">
+				<h2 style:"text-align: center"> The Needham Historical Walk App</h2>
+				<figure><img src = "images/transparentlogo.png" width = "200"></figure>
+				<p>The Needham Historical Walk App joins the old with the new, providing a journey through Needham's fascinating history right at your fingertips.</p>
+				<p>Check out the interactive map:</p>
+				<a href = "map.html#map-page" data-ajax = "false"><img src = "images/map.png" width = "300"></a>
+				<p>Each <img src = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt = "blue pin"> represents a historical site.</p>
+				<p>Check out the <a href = "index.html#search-page" data-ajax="false">search page</a> to see a list of Needham's historical sites.</p>
+				<h4>Credits:</h4>
+				<h5>The WeStory Team</h5>
+				<p>Dianne Lee (Project Lead)</p> <p>Alison Garrett-Engele</p> <p>Sarah Garrett-Engele</p> <p>Zoe Lockhart</p>
+				<h5>Advisory Board</h5>
+				<p>Alison Borrelli (Needham Historical Society)</p>
+				<p>Jane Chinnaswamy (Needham High School)</p>
+				<p>Gloria Greis (Needham Historical Society)</p> 
+				<p>Jegoo Lee (JEDLab)</p>
+				<p>Brent Zajaczkowski (TripAdvisor)</p>
+			</div><!--closes content-->
+		</div> <!--closes index page-->
+
+
+		<!--SEARCH PAGE-->
+		<div data-role = "page" id = "search-page">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = yes"> 
+			<div data-role="header" data-id="head1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html#index-page" data-ajax="false">Home</a></li>
+						<li><a href="map.html#map-page" data-ajax = "false">Map</a></li>
+						<li><a href="index.html#search-page" data-ajax="false">Search</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /header -->
+
+			<br>
+
+			<div>
+				<ul data-role="listview" data-inset="true" data-divider-theme="d" data-filter="true" data-filter-placeholder="Search sites...">
+					<br>
+					<li data-role="list-divider">Chestnut Street Loop</li>
+					<li><a href="sites.html#BowlingGreen" data-ajax="false">The Bowling Green</a></li>
+					<li><a href="sites.html#KostasPizza" data-ajax="false">TripAdvisor/Kosta's Pizza</a></li>
+					<li><a href="sites.html#RocheBrothers" data-ajax="false">Roche Brothers</a></li>
+					<li><a href="sites.html#BranchLib" data-ajax="false">Needham Branch Library</a></li>
+					<li><a href="sites.html#Glover" data-ajax="false">Glover Hospital</a></li>
+					<li><a href="sites.html#PolFire" data-ajax="false">Police and Fire Station</a></li>
+					<li><a href="sites.html#BankRobbery" data-ajax="false">Needham Trust Bank Robbery</a></li>
+					<li><a href="sites.html#TownCenter" data-ajax="false">Town Center/Common</a></li>
+					
+
+				</ul>
+			</div><!--/listview-->
+		</div> <!--closes search page-->
+
+
+	</body>
+
+
+</html>

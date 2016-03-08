@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Needham History App </title>
+		<meta name = "viewport" content="width=device-width, initial-scale=1"> <!--scale the application in a mobile app according to the device-->
+		<link rel="icon" type="image/png" href="logo.png">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<style type = "text/css">
+			#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+		</style>
+		
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> <!--jquery mobile is a predefined user interface, has the cool headers in default, etc.-->
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+	    <script type = "text/javascript" src = "mapcode.js"></script>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="map-page" data-url="map-page">
+
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = yes"> 
+			<div data-role="header" data-id="head1" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html#index-page" data-ajax="false">Home</a></li>
+						<li><a href="map.html#map-page" data-ajax = "false">Map</a></li>
+						<li><a href="index.html#search-page" data-ajax="false">Search</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div><!-- /header -->
+
+			<div id = "panel" align = "center">
+
+				<fieldset data-role="controlgroup" data-type="horizontal">
+				    <label for="start">Start</label>
+				    <select name="start" id="start" onchange = "calcRoute();">
+				    	<option value = "#" data-placeholder = "true">Start</option>
+				    	<option value = "yourloc" >Your location</option>
+				        <option value= 42.273759,-71.237571>Bowling Green</option>
+				        <option value= 42.274756,-71.237987>Kosta's Pizza</option>
+				        <option value= 42.280148,-71.236784>Roche Brothers (First Location)</option>
+						<option value= 42.273991,-71.237905>Roche Brothers (Current Location)</option>
+				        <option value= 42.280075,-71.238071>Needham Branch Library</option>
+				        <option value= 42.277266,-71.236697>Glover Hospital</option>
+				        <option value= 42.278492,-71.236677>Police and Fire Station</option>
+				        <option value= 42.280432,-71.238138>Needham Trust Bank Robbery</option>
+				        <option value= 42.279678,-71.235826>Town Center/Common</option>
+				    </select>
+
+				    <label for="end">End</label>
+				    <select name="end" id="end" onchange="calcRoute();"> 
+				    	<option value = "#" data-placeholder = "true">End</option>
+				        <option value= 42.273759,-71.237571>Bowling Green</option>
+				        <option value= 42.274756,-71.237987>Kosta's Pizza</option>
+				        <option value= 42.280148,-71.236784>Roche Brothers (First Location)</option>
+						<option value= 42.273991,-71.237905>Roche Brothers (Current Location)</option>
+				        <option value= 42.280075,-71.238071>Needham Branch Library</option>
+				        <option value= 42.277266,-71.236697>Glover Hospital</option>
+				        <option value= 42.278492,-71.236677>Police and Fire Station</option>
+				        <option value= 42.280432,-71.238138>Needham Trust Bank Robbery</option>
+				        <option value= 42.279678,-71.235826>Town Center/Common</option>
+				    </select>
+				</fieldset>
+
+			</div>
+
+			<!--<div id="panel">
+			    <b>Start: </b>
+			    <select id="start" data-native-menu="false">
+			      	<option value="penn station, new york, ny">Penn Station</option>
+			      	<option value="grand central station, new york, ny">Grand Central Station</option>
+			    </select>
+
+			    <b>End: </b>
+			    <select id="end" onchange="drawMap(defaultLatLng);" data-native-menu="false"> //alcRoute();"
+			      	<option value="260 Broadway New York NY 10007">City Hall</option>
+			      	<option value="W 49th St & 5th Ave, New York, NY 10020">Rockefeller Center</option>
+			    </select>
+
+			</div>-->
+			    
+			<div role="main" class="ui-content" id="map-canvas">
+			    <!-- map loads here... -->
+			</div>
+			 
+			<div id="warnings_panel" style="width:100%;height:10%;text-align:center"></div>
+
+		</div> <!--closes page-->
+
+
+
+		
+
+	</body>
+
+
+</html>
